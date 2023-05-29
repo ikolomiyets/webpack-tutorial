@@ -74,9 +74,18 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: 'hello-world.html',
+            chunks: ['hello-world'],
             title: 'Hello World',
             template: 'src/page-template.hbs',
             description: 'Some Description'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'kiwi.html',
+            chunks: ['kiwi'],
+            title: 'Kiwi',
+            template: 'src/page-template.hbs',
+            description: 'Some Kiwi Description'
         })
     ]
 };
